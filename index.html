@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to Vecta Corp.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/jquery.mobilemenu.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#responsive-menu').mobileMenu();
+			$("#tabs-div").tabs();
+			$("#accordion").accordion();
+		});
+		$(document).load(function()
+		{
+			$(document).tooltip();
+		});
+	</script>
+</head>
+<body>
+	<main class="container">
+		<figure class="three columns">
+			<img src="images/logo.gif" class="scale-with-grid" alt="">
+		</figure>
+		
+		<nav class="thirteen columns">
+			<ul id="responsive-menu">
+				<li><a href="index.html" title="Overview of Vecta Corporation">Home</a></li>
+				<li><a href="aboutus.html" title="About Our Team's Approach and Company Values">About Us</a></li>
+				<li><a href="solutions.html" title="Vecta Corporation offers innovative solutions that are state-of-the-art">Solutions</a></li>
+				<li><a href="support.html" title="If you need any technical or business support, please see our support page.">Support</a></li>
+				<li><a href="contactus.html" title="To contact a sales representative or submit a form">Contact Us</a></li>
+			</ul>
+		</nav>
+		
+		<header class="sixteen columns">
+			<img src="images/header.gif" class="scale-with-grid" alt="">
+		</header>
+		
+		<section id="welcome" class="five columns">
+			<h4>Welcome</h4>
+
+			<p>With innovative approaches and advanced methodologies, Vecta Corporation provides scalable business solutions to help companies achieve success through revenue increase, cost management, and user satisfaction. Our approach stems from the three most important business growth aspects: helping companies reach prospects, assist in converting prospects to customers, and assist in retaining those customers. This is accomplished through our interactive solutions and expertise in providing a memorable and positive user experience.</p>
+		</section>
+		
+		<section id="solutions" class="six columns">
+			<h4>Our Solutions</h4> 
+			<div id="tabs-div">
+				<ul role="tablist">
+					<li role="tab"><a href="#v-pro">vProspect 2.0</a></li>
+					<li role="tab"><a href="#v-con">vConvert 2.0</a></li>
+					<li role="tab"><a href="#v-ret">vRetain 1.0</a></li>
+				</ul>
+				<div id="v-pro">
+					<img src="images/logo_vprospect.gif" alt="vProspect 2.0 logo">
+					<p>Define and research your target audience, define your strategy to reach that audience and present a strong and memorable brand to that audience.</p>
+				</div>
+				<div id="v-con">
+					<img src="images/logo_vconvert.gif" alt="vConvert 2.0 logo">
+					<p>Create a highly user-friendly and easy-to-navigate information architecture that will help your prospects interact with the company on a highly interactive level.</p>
+				</div>
+				<div id="v-ret">
+					<img src="images/logo_vretain.gif" alt="vRetain 1.0 logo">
+					<p>Build on existing customer relationships to improve productivity and maximize customer loyalty, while growing revenues.</p>
+				</div>
+			</div>
+		</section>
+		
+		<section id="testimonials" class="five columns">
+			<h4>Client Testimonials</h4>
+
+			<div id="accordion">
+				<h3>Iona Ford, President, Chevy Dealers Association</h3>
+				<div>
+					<p>Throughout the years we have worked with Vecta Corporation, we have always been amazed at the level of dedication and professionalism that they have provided us and our WGDC products. It is this commitment that has increased both our income and exposure exponentially.<br>
+						<br>Iona Ford
+						<br>President
+						<br>Chevy Dealers Association</p>
+				</div>
+				<h3>Robin Banks, CEO, Profits Financial, Inc.</h3>
+				<div>
+					<p>Incredible results from an incredible effort by the Vecta Corporation team! We are very pleased with the business benefits we have rceived by working with them.<br>
+
+						<br>Robin Banks
+						<br>CEO
+						<br>Profits Financial, Inc.</p>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
