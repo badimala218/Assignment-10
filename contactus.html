@@ -12,16 +12,19 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 	<script src="js/jquery.mobilemenu.js"></script>
-	<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+	<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
 	<script>
 		$(document).ready(function(){
 			$('#responsive-menu').mobileMenu();
-			$("input").checkboxradio();
-			$("select").selectmenu();
-			$( "input[type=submit]" ).button();
-    		$( "input[type=submit]" ).on( "click", function( event ) {
+			$("input[type='radio']").checkboxradio();
+			$("input[type='checkbox']").checkboxradio();
+			$("fieldset").controlgroup();
+			$("#companysize").selectmenu();
+			$("#hearaboutus").selectmenu();
+			$( "#submit" ).button();
+    		$( "#submit" ).on( "click", function( event ) {
       			event.preventDefault();
     		} );
 		});
@@ -80,7 +83,7 @@
 
 			    <br>
 			    How many employees do you have?
-			    <select name="companysize">
+			    <select name="companysize" id="companysize">
                     <option value="1-10">1-10</option>
                     <option value="11-100">11-100</option>
                     <option value="101-1000">101-1000</option>
@@ -88,7 +91,7 @@
 		        </select>
                 
 			    How did you hear about us?
-			    <select name="hearaboutus" multiple="" size="5">
+			    <select name="hearaboutus" multiple="" size="5" id="hearaboutus">
                     <option value="Magazine Ad">Magazine Ad</option>
                     <option value="Radio Ad">Radio Ad</option>
                     <option value="TV Ad">TV Ad</option>
@@ -98,7 +101,7 @@
                 
 			    Questions or comments for our sales representatives?
 			    <textarea name="questions" size="30" rows="5"></textarea>
-			    <input type="submit" name="submit" value="Submit Now" class="ui=button ui-widget ui-corner-all">
+			    <input type="submit" id="submit" name="submit" value="Submit Now" class="ui=button ui-widget ui-corner-all">
 		    	</fieldset>
 			</form>
 	    </section>
