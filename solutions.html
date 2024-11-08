@@ -14,17 +14,53 @@
 
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="js/jquery.mobilemenu.js"></script>
-	<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+	<script src="js/alt/jquery.backtothetop.min.js"></script>
+	<script src="js/jquery.fixedcontent.js"></script>
+	<script src="js/stickable.js"></script>
+	<script src="js/alt/hoverSlide.js"></script>
 	<script>
 		$(document).ready(function(){
 			$('#responsive-menu').mobileMenu();
-			
+			//Alternative sticking behavior
+			//$("#sticky").stickable();
+			$(".tab1").hoverSlide();
+			$(".tab2").hoverSlide({
+				top: 120,
+			});
+			$(".tab3").hoverSlide({
+				top: 180,
+			});
 		});
 		$(document).load(function()
 		{
 			$(document).tooltip();
 		});
 	</script>
+	<style>
+		#welcome div
+		{
+			margin: 0;
+		}
+		h5 {
+			padding-top: 5px;
+		}
+		ul {
+			margin: 0;
+		}
+		/* Alternative sticking behavior */
+		/* #sticky {
+			margin-top: 0 !important;
+			position: fixed;
+			top: 0;
+			z-index:10000;
+			background-color: rgba(162, 162, 162, 0.5);
+			height: 100px;
+			ul li a {
+				background-color: white;
+			}
+		} */
+	</style>
 </head>
 <body>
 	<main class="container">
@@ -46,17 +82,85 @@
 			<img src="images/header.gif" class="scale-with-grid" alt="">
 		</header>
 		
-		<section id="welcome" class="eleven columns">
+		<div id="welcome" class="eleven columns">
 			<h4>Our Solutions</h4>
 
-			<p>&nbsp;</p>
+			<div id="v-pro">
+				<h5>vProspect 2.0</h5>
+				<ul>
+					<li>Define and research your target audience, define your strategy to reach that audience and present a strong and memorable brand to that audience. vProspect can help your business:</li>
+					<li>Define your target audience and competition.</li>
+					<li>Research your competition and your target audience's behavior, needs, technical know-how level, etc.</li>
+					<li>Establish a conceptual and visual identity that corresponds to the defined direction of the company.</li>
+					<li>Ensure consistency across all media.</li>
+					<li>Establish corporate guidelines for cohesiveness of any future developments.</li>
+					<li>Define and/or re-defining your service and/or product offerings.</li>
+					<li>Define expansion plans and strategies.</li>
+					<li>Implement Search Engine Optimization of all Online materials.</li>
+				</ul>
+			<strong><a href="#responsive-menu">Back to top</a></strong></div>
+
+			<div id="v-con">
+				<h5>vConvert 2.0</h5>
+				<ul>
+					<li>Create a highly user-friendly and easy-to-navigate information architecture that will help your prospects interact with
+						the company on a highly interactive level. vConvert can help your business:
+					</li>
+					<li>Build a visual and functional user front end that focuses exclusively on providing an exceptional user experience while conveying company, service and product information.
+					</li>
+					<li>Cause the desired emotional response in a user to facilitate conversion to a client.
+					</li>
+					<li>Build sites that move beyond merely conveying information. They advertise, motivate, excite and inspire. Users are more likely to remember and recommend your site.
+					</li>
+					<li>Research your target audience's behavior, needs, technical know-how and level, etc.
+					</li>
+					<li>Develop any applicable back-end programs to facilitate user interaction with the company and offerings on a highly functional level to allow any kind of online transactions and a completely centralized information collection and access point, accessible from any location.
+					</li>
+					<li>Create an architecture to display the site content and information in a logical and easy to access manner. Facilitating thereby the desired ease, for the user to find what they are looking for quickly and easily. Allowing the user to focus on the subject at hand rather than searching for information on the site.
+					</li>
+				</ul>
+				<strong><a href="#responsive-menu">Back to top</a></strong>
+			</div>
+
+			<div id="v-ret">
+				<h5>vRetain 1.0</h5>
+				<ul>
+					<li>Build on existing customer relationships to improve productivity and maximize customer loyalty, while growing revenues. vRetain can help your business:</li>
+		
+					<li>Streamline existing business infrastructures by utilizing technology for automation, information centralization, and information sharing among all business units and departments, as well as efficient prospect & customer tracking and interaction within the company.</li>
+		
+					<li>Collect crucial information, data and statistics that allow a company to keep in touch with users in a very customized, highly targeted way.</li>
+		
+					<li>Analyze site visitor behavior through traffic analysis, usability studies and interactive polling. Recommending and making site and application adjustments to improve usability and user experience.</li>
+				</ul>	
+				<strong><a href="#responsive-menu">Back to top</a></strong>
+			</div>
+		</div>
 		</section>
 		
 		<section id="testimonials" class="five columns">
-			<h4>Quick Nav</h4>
-
-			<!-- INSERT ACCORDION HERE -->
+				<div>
+					<!--Alternative sticking behavior-->
+					<!--id="sticky">-->
+					<!-- <h4>Quick Nav</h4>
+					<nav id="quick">
+						<ul>
+							<li><a href="#v-pro">vProspect 2.0</a></li>
+							<li><a href="#v-con">vConvert 2.0</a></li>
+							<li><a href="#v-ret">vRetain 1.0</a></li>
+						</ul>
+					</nav> -->
+					<nav id="side">
+						<div class="tab tab1"><a href="#v-pro">vProspect 2.0</a></div>
+						<div class="tab tab2"><a href="#v-con">vConvert 2.0</a></div>
+						<div class="tab tab3"><a href="#v-ret">vRetain 1.0</a></div>
+						</ul>
+					</nav>
+				</div>
 		</section>
+		<a href="#top" id="backtothetop-fixed">
+			Back to the Top
+		</a>
 	</main>
 </body>
 </html>

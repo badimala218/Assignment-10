@@ -14,11 +14,16 @@
 
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="js/jquery.mobilemenu.js"></script>
-	<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 	<script>
 		$(document).ready(function(){
 			$('#responsive-menu').mobileMenu();
-			
+			$("input").checkboxradio();
+			$("select").selectmenu();
+			$( "input[type=submit]" ).button();
+    		$( "input[type=submit]" ).on( "click", function( event ) {
+      			event.preventDefault();
+    		} );
 		});
 		$(document).load(function()
 		{
@@ -93,7 +98,7 @@
                 
 			    Questions or comments for our sales representatives?
 			    <textarea name="questions" size="30" rows="5"></textarea>
-			    <input type="submit" name="submit" value="Submit Now">
+			    <input type="submit" name="submit" value="Submit Now" class="ui=button ui-widget ui-corner-all">
 		    	</fieldset>
 			</form>
 	    </section>
