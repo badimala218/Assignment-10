@@ -8,7 +8,7 @@ Incorporate jQuery Plugins & jQuery UI
 Sticky navigation should be on the right side of the page, but may move when window shrinks, but stays on the page.
 Back To the Top button appears in bottom-right corner when scrolling down.
 ##### Contact US
-On the contact page, jQuery UI source examples were used for widget implementation.
+On the contact page, jQuery UI source examples were used for widget implementation. There seems to be issues with matching versions of jQuery and jQuery UI.  If the jQuery version is increased to match jQuery UI, the select box has odd behavior, but there are no exceptions.  If the jQuery UI version is decreased to match the jQuery version, it says checkboxradio() is not a function.  Therefore, I kept it at this version so the select box appears.
 
 #### File information
 jQuery plugins are located in js and js/alt folders.
